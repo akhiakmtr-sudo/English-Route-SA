@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
 import ContactUs from './components/ContactUs';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <ContactUs />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
