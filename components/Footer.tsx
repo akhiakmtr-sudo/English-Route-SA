@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LocationMarkerIcon } from './icons/LocationMarkerIcon';
 import { PhoneIcon } from './icons/PhoneIcon';
@@ -46,7 +45,6 @@ const Footer: React.FC = () => {
             <ul className="mt-4 space-y-2">
               <li><a href="#services" className="text-gray-300 hover:text-white transition">Services</a></li>
               <li><a href="#about" className="text-gray-300 hover:text-white transition">About Us</a></li>
-              <li><a href="#testimonials" className="text-gray-300 hover:text-white transition">Testimonials</a></li>
               <li><a href="#faq" className="text-gray-300 hover:text-white transition">FAQ</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white transition">Contact Us</a></li>
             </ul>
