@@ -32,10 +32,10 @@ const About: React.FC = () => {
           </h2>
           <div className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto space-y-6">
             <p>
-              Every great journey begins with a dream — and at English Tour, we turn that dream into a destination.
+              Every great journey begins with a dream — and at English Route, we turn that dream into a destination.
             </p>
             <p>
-              Born in Dubai, the city where the world meets, English Tour is your gateway to global education. We’re more than an abroad education consultancy — we’re your travel companion on the road to success. Our passion is helping students discover not just where they want to study, but who they can become.
+              Born in Dubai, the city where the world meets, English Route is your gateway to global education. We’re more than an abroad education consultancy — we’re your travel companion on the road to success. Our passion is helping students discover not just where they want to study, but who they can become.
             </p>
             <p>
               From the first conversation to the first day on campus, we walk beside you — guiding, advising, and celebrating every step of your academic journey. Whether it’s the UK, Canada, Australia, the USA, or beyond, our expert team connects you to the world’s leading universities with clarity, care, and confidence.
@@ -44,7 +44,7 @@ const About: React.FC = () => {
               We believe studying abroad is not just about earning a degree — it’s about building a life filled with experiences, friendships, and opportunities that last forever.
             </p>
             <p className="font-semibold text-brand-blue">
-              At English Tour Study Abroad, we don’t just send students abroad.
+              At English Route Study Abroad, we don’t just send students abroad.
               <br/>
               We send dreamers to chase their future.
             </p>

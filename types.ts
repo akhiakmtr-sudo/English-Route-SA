@@ -6,19 +6,19 @@ export interface Testimonial {
   destination: string;
 }
 
-// FIX: Add and export the Event interface for the Events component.
 export interface Event {
   type: string;
   title: string;
-  date: string;
-  time: string;
-  description: string;
+  country: string;
+  lastDateToApply: string;
+  points: string[];
+  imageUrl: string;
 }
 
-// FIX: Define and export ChatMessage and MessageSender types for the AI Advisor component.
+// FIX: Add and export MessageSender enum and ChatMessage interface for AiAdvisor component.
 export enum MessageSender {
-  USER = 'user',
-  AI = 'ai',
+  USER = 'USER',
+  AI = 'AI',
 }
 
 export interface ChatMessage {

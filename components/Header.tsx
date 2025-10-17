@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
@@ -16,9 +17,9 @@ const Header: React.FC = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
     { name: 'About Us', href: '#about' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Mission & Vision', href: '#mission-vision' },
+    { name: 'Services', href: '#services' },
   ];
 
   const handleLinkClick = () => {
@@ -33,7 +34,7 @@ const Header: React.FC = () => {
             <a href="#" onClick={handleLinkClick} className="flex-shrink-0">
               <img 
                 src="https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/stdyabrdhome.png" 
-                alt="English Tour Study Abroad Logo"
+                alt="English Route Study Abroad Logo"
                 className="h-20 w-auto"
               />
             </a>

@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import About from './components/About';
-import Footer from './components/Footer';
-import Faq from './components/Faq';
+import MissionVision from './components/MissionVision';
+import Services from './components/Services';
+import Events from './components/Events';
 import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
@@ -14,9 +15,10 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Hero />
-        <Services />
         <About />
-        <Faq />
+        <MissionVision />
+        <Services />
+        <Events />
         <ContactUs />
       </main>
       <Footer />
