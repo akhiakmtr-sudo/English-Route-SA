@@ -1,18 +1,17 @@
-
 import React, { useState } from 'react';
 import { ChevronDownIcon } from './icons/ChevronDownIcon';
 
 const faqData = [
   {
     question: "What documents are required for a student visa application?",
-    answer: "Generally, you will need a valid passport, proof of acceptance from a designated learning institution, proof of financial support, passport-sized photographs, and sometimes a medical examination. Requirements vary by country, and English Route provides a detailed checklist for your specific destination."
+    answer: "Generally, you will need a valid passport, proof of acceptance from a designated learning institution, proof of financial support, passport-sized photographs, and sometimes a medical examination. Requirements vary by country, and English Route Study Abroad provides a detailed checklist for your specific destination."
   },
   {
     question: "How long does the entire university application process take?",
     answer: "The process can take anywhere from 6 to 12 months. This includes researching universities, preparing for standardized tests (like IELTS or TOEFL), gathering documents, writing essays, and waiting for admission decisions. We recommend starting as early as possible."
   },
   {
-    question: "Can English Route help me find and apply for scholarships?",
+    question: "Can English Route Study Abroad help me find and apply for scholarships?",
     answer: "Absolutely! We maintain an extensive database of scholarships, grants, and bursaries. Our counselors will help you identify opportunities you're eligible for and assist you with the application process to maximize your chances of receiving financial aid."
   },
   {
