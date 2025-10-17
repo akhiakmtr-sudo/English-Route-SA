@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                     Your Journey to a Global Future <span className="text-brand-teal">Starts Here</span>.
                 </h1>
                 <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-600">
-                    English Route is your trusted partner for unlocking international opportunities. We provide expert guidance for studying abroad and securing your dream job overseas.
+                    English Tour is your trusted partner for unlocking international opportunities. We provide expert guidance for studying abroad and securing your dream job overseas.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <Button href="#services" variant="primary">Explore Our Services</Button>

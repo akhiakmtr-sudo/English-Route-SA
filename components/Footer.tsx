@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { LocationMarkerIcon } from './icons/LocationMarkerIcon';
 import { PhoneIcon } from './icons/PhoneIcon';
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           
           <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold inline-block">English Route Study Abroad</h2>
+            <h2 className="text-2xl font-bold inline-block">English Tour Study Abroad</h2>
             <p className="text-sm text-gray-300 tracking-wider">STUDY & WORK ABROAD</p>
             <p className="mt-4 text-gray-300 max-w-sm mx-auto md:mx-0">
               Your trusted partner for unlocking international opportunities and building a global future.
@@ -52,7 +53,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/20 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} English Route Study Abroad. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} English Tour Study Abroad. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

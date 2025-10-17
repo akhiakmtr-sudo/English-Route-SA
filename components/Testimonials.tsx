@@ -5,14 +5,14 @@ import { Testimonial } from '../types';
 
 const testimonialsData: Testimonial[] = [
   {
-    quote: "English Route made my dream of studying in Canada a reality. Their team was incredibly supportive throughout the entire visa process. I couldn't have done it without them!",
+    quote: "English Tour made my dream of studying in Canada a reality. Their team was incredibly supportive throughout the entire visa process. I couldn't have done it without them!",
     name: 'Priya Sharma',
     role: 'Student, University of Toronto',
     image: 'https://picsum.photos/seed/person1/100/100',
     destination: 'Canada',
   },
   {
-    quote: "Finding a tech job in Germany seemed impossible until I contacted English Route. Their interview coaching and resume services were top-notch and landed me a fantastic role in Berlin.",
+    quote: "Finding a tech job in Germany seemed impossible until I contacted English Tour. Their interview coaching and resume services were top-notch and landed me a fantastic role in Berlin.",
     name: 'Michael Chen',
     role: 'Software Engineer, Berlin',
     image: 'https://picsum.photos/seed/person2/100/100',
@@ -26,21 +26,21 @@ const testimonialsData: Testimonial[] = [
     destination: 'Australia',
   },
   {
-    quote: "The entire process was smooth. English Route helped me secure admission and a scholarship for my MBA in the UK. Truly grateful!",
+    quote: "The entire process was smooth. English Tour helped me secure admission and a scholarship for my MBA in the UK. Truly grateful!",
     name: 'David Smith',
     role: 'MBA Student, London Business School',
     image: 'https://picsum.photos/seed/person4/100/100',
     destination: 'UK',
   },
   {
-    quote: "I was overwhelmed with the US university application process. English Route's counselors were patient and knowledgeable. Now I'm at my dream school!",
+    quote: "I was overwhelmed with the US university application process. English Tour's counselors were patient and knowledgeable. Now I'm at my dream school!",
     name: 'Sophia Rodriguez',
     role: 'Undergrad, Stanford University',
     image: 'https://picsum.photos/seed/person5/100/100',
     destination: 'USA',
   },
   {
-    quote: "Moving to Canada for work was a big step. English Route's job assistance program was a game-changer. They connected me with employers and helped with my work permit.",
+    quote: "Moving to Canada for work was a big step. English Tour's job assistance program was a game-changer. They connected me with employers and helped with my work permit.",
     name: "Liam O'Connell",
     role: 'Mechanical Engineer, Vancouver',
     image: 'https://picsum.photos/seed/person6/100/100',

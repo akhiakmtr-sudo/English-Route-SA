@@ -11,7 +11,7 @@ const AiAdvisor: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       sender: MessageSender.AI,
-      text: "Hello! I'm your AI-powered advisor from English Route Study Abroad. How can I help you explore your study or work abroad options today?",
+      text: "Hello! I'm your AI-powered advisor from English Tour Study Abroad. How can I help you explore your study or work abroad options today?",
     },
   ]);
   const [input, setInput] = useState('');

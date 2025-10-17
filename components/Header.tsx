@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
@@ -34,7 +35,7 @@ const Header: React.FC = () => {
             <a href="#" onClick={handleLinkClick} className="flex-shrink-0">
               <img 
                 src="https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/stdyabrdhome.png" 
-                alt="English Route Study Abroad Logo"
+                alt="English Tour Study Abroad Logo"
                 className="h-20 w-auto"
               />
             </a>
