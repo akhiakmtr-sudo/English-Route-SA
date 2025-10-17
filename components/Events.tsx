@@ -6,6 +6,21 @@ import { LocationMarkerIcon } from './icons/LocationMarkerIcon';
 
 const eventsData: Event[] = [
   {
+    type: 'University Admission',
+    title: 'Qualifi Level 3 Diploma in Health and Social Care',
+    country: 'UK',
+    lastDateToApply: 'Feb 28, 2025',
+    points: [
+      'Level 3 RQF Qualification',
+      'Fully Accredited by Ofqual',
+      'Pathway to a University Degree',
+      'Develops skills for health and social care sector',
+      'Available in the UK and Internationally'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba9996a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    detailsUrl: '#/opportunity/qualifi-level-3-diploma'
+  },
+  {
     type: 'Scholarship',
     title: 'Global Leader Scholarship for STEM',
     country: 'United Kingdom',
@@ -107,7 +122,7 @@ const Events: React.FC = () => {
                   </ul>
 
                   <div className="mt-auto">
-                      <a href="#contact" className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1">
+                      <a href={event.detailsUrl || '#contact'} className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1">
                           Learn More
                       </a>
                   </div>

@@ -13,6 +13,7 @@ export interface Event {
   lastDateToApply: string;
   points: string[];
   imageUrl: string;
+  detailsUrl?: string;
 }
 
 // FIX: Add and export MessageSender enum and ChatMessage interface for AiAdvisor component.
