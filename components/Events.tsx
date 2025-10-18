@@ -21,60 +21,20 @@ const eventsData: Event[] = [
     detailsUrl: '#/opportunity/qualifi-level-3-diploma'
   },
   {
-    type: 'Scholarship',
-    title: 'Global Leader Scholarship for STEM',
-    country: 'United Kingdom',
-    lastDateToApply: 'Dec 15, 2024',
+    type: 'Study & Work',
+    title: 'Reach the UK in 14 Days',
+    country: 'UK',
+    lastDateToApply: 'Ongoing',
     points: [
-      'Fully funded PhD program',
-      'Covers tuition & living stipend',
-      'Access to world-class labs',
-      'For students in STEM fields',
-      'Internship opportunity included',
+      'Plus Two Certificate & CV required',
+      'Work alongside your studies',
+      'Visa processing in 14 working days',
+      'No interview required',
+      'Age: 18 to 55',
+      'Only £6000, no advance payment',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    type: 'Job Opportunity',
-    title: 'Software Engineer (Graduate Program)',
-    country: 'Germany',
-    lastDateToApply: 'Nov 30, 2024',
-    points: [
-      'Work with a leading tech giant',
-      'Competitive graduate salary',
-      'Includes German language courses',
-      'Visa sponsorship provided',
-      'Mentorship from senior engineers',
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    type: 'University Admission',
-    title: 'Masters in Business Analytics Intake',
-    country: 'Australia',
-    lastDateToApply: 'Jan 20, 2025',
-    points: [
-      'Top 10 university globally',
-      'Post-study work visa options',
-      'Curriculum designed with industry',
-      'Located in vibrant Sydney',
-      'Strong focus on practical skills',
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    type: 'Webinar',
-    title: 'Canada Permanent Residency Pathways',
-    country: 'Online',
-    lastDateToApply: 'Oct 25, 2024',
-    points: [
-      'Live session with migration agent',
-      'Understand the Express Entry system',
-      'Learn about Provincial Nominee Programs',
-      'Q&A session included',
-      'Free profile eligibility check',
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1600267175161-c97b2b404d4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    detailsUrl: 'https://wa.me/971589076061'
   },
 ];
 
@@ -122,8 +82,13 @@ const Events: React.FC = () => {
                   </ul>
 
                   <div className="mt-auto">
-                      <a href={event.detailsUrl || '#contact'} className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1">
-                          Learn More
+                      <a 
+                        href={event.detailsUrl || '#contact'} 
+                        className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1"
+                        target={event.title === 'Reach the UK in 14 Days' ? '_blank' : undefined}
+                        rel={event.title === 'Reach the UK in 14 Days' ? 'noopener noreferrer' : undefined}
+                      >
+                          {event.title === 'Reach the UK in 14 Days' ? 'Apply Now' : 'Learn More'}
                       </a>
                   </div>
                 </div>
