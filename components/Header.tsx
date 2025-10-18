@@ -31,12 +31,15 @@ const Header: React.FC = () => {
       <header className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <a href="#" onClick={handleLinkClick} className="flex-shrink-0">
+            <a href="#" onClick={handleLinkClick} className="flex items-center gap-3 flex-shrink-0">
               <img 
                 src="https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/stdyabrdhome.png" 
                 alt="English Route Study Abroad Logo"
-                className="h-20 w-auto"
+                className="h-16 w-auto"
               />
+              <span className="text-xl font-extrabold text-brand-blue leading-tight">
+                English Route<br />Study Abroad
+              </span>
             </a>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

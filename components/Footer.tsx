@@ -49,8 +49,7 @@ const Footer: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-center md:justify-start mt-2">
                         <PhoneIcon className="text-brand-gold" />
-                        {/* FIX: Complete the phone number link */}
-                        <a href="tel:+442034887790" className="ml-4 hover:text-white transition">+44 203 488 7790</a>
+                        <a href="tel:+447826828220" className="ml-4 hover:text-white transition">+44 7826828220</a>
                     </div>
                 </div>
                  {/* Email */}
