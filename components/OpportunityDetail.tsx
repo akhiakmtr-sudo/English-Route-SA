@@ -1,6 +1,8 @@
 import React from 'react';
 import { DownloadIcon } from './icons/DownloadIcon';
 
+const pdfUrl = "https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/QUALIFI-Level-3-Diploma-in-Health-and-Social-Care-SpecificationJune2025v2.p_20251019_141348_0000.pdf";
+
 const specificationsData = [
     { label: 'Qualification title', value: 'Qualifi Level 3 Diploma in Health and Social Care' },
     { label: 'Qualification type', value: 'Vocational Related Qualification' },
@@ -11,7 +13,7 @@ const specificationsData = [
     { label: 'Qualification number (RQF)', value: '603/0819/9' },
     { label: 'Progression routes', value: 'Qualifi, Level 4 Certificate or first of 3 year Honours Degree at UK University' },
     { label: 'Availability', value: 'UK and International' },
-    { label: 'Centre Specification', value: <a href="#" className="text-brand-teal font-semibold hover:underline">Click here to download</a> },
+    { label: 'Centre Specification', value: <a href={pdfUrl} download className="text-brand-teal font-semibold hover:underline">Click here to download</a> },
 ];
 
 const mandatoryUnits = [
@@ -102,7 +104,7 @@ const OpportunityDetail: React.FC = () => {
 
                         <div className="pt-8 border-t border-gray-200">
                              <a 
-                                href="#" 
+                                href={pdfUrl} 
                                 download 
                                 className="inline-flex items-center justify-center bg-brand-teal text-white font-bold py-3 px-8 rounded-md hover:bg-brand-blue transition-all shadow-lg transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal"
                             >
