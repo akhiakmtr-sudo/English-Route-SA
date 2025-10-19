@@ -16,7 +16,6 @@ export interface Event {
   detailsUrl?: string;
 }
 
-// FIX: Add and export MessageSender enum and ChatMessage interface for AiAdvisor component.
 export enum MessageSender {
   USER = 'USER',
   AI = 'AI',
