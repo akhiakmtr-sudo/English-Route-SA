@@ -10,14 +10,14 @@ const servicesData = [
     title: 'Study Abroad Services',
     description: 'From selection to visa applications, we guide you at every step. We partner with top institutions worldwide to find the perfect fit for your academic goals.',
     features: ['Career Counseling', 'Application Assistance', 'Visa Guidance'],
-    imageUrl: 'https://picsum.photos/seed/study/600/400',
+    imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/3bda1d9f549920e4a527b89824fd2036.jpg',
   },
   {
     icon: <BriefcaseIcon />,
     title: 'Abroad Job Services',
     description: 'Navigate the international job market with confidence. We help you with resume building, interview preparation, and connecting with global employers for your next career move.',
     features: ['Global Job Search', 'Resume & CV Writing', 'Interview Coaching', 'Work Permit Support'],
-    imageUrl: 'https://picsum.photos/seed/work/600/400',
+    imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/48d78304470d5aecd8a9dcf925ff3136.jpg',
   },
 ];
 

@@ -17,12 +17,12 @@ const eventsData: Event[] = [
       'Develops skills for health and social care sector',
       'Available in the UK and Internationally'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba9996a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/20251019_164526_0000.jpg',
     detailsUrl: '#/opportunity/qualifi-level-3-diploma'
   },
   {
     type: 'Study & Work',
-    title: 'Reach the UK in 14 Days',
+    title: 'Reach UK in 14 Days',
     country: 'UK',
     lastDateToApply: 'Ongoing',
     points: [
@@ -33,7 +33,7 @@ const eventsData: Event[] = [
       'Age: 18 to 55',
       'Only £6000, no advance payment',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/English+Route+Study+Abroad_20251019_170226_0000.png',
     detailsUrl: 'https://wa.me/971589076061'
   },
 ];
@@ -85,10 +85,10 @@ const Events: React.FC = () => {
                       <a 
                         href={event.detailsUrl || '#contact'} 
                         className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1"
-                        target={event.title === 'Reach the UK in 14 Days' ? '_blank' : undefined}
-                        rel={event.title === 'Reach the UK in 14 Days' ? 'noopener noreferrer' : undefined}
+                        target={event.title === 'Reach UK in 14 Days' ? '_blank' : undefined}
+                        rel={event.title === 'Reach UK in 14 Days' ? 'noopener noreferrer' : undefined}
                       >
-                          {event.title === 'Reach the UK in 14 Days' ? 'Apply Now' : 'Learn More'}
+                          {event.title === 'Reach UK in 14 Days' ? 'Apply Now' : 'Learn More'}
                       </a>
                   </div>
                 </div>
