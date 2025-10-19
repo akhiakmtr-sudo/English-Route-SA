@@ -22,7 +22,7 @@ const eventsData: Event[] = [
   },
   {
     type: 'Study & Work',
-    title: 'Reach UK in 14 Days',
+    title: 'Reech UK in 14 Days',
     country: 'UK',
     lastDateToApply: 'Ongoing',
     points: [
@@ -85,10 +85,10 @@ const Events: React.FC = () => {
                       <a 
                         href={event.detailsUrl || '#contact'} 
                         className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1"
-                        target={event.title === 'Reach UK in 14 Days' ? '_blank' : undefined}
-                        rel={event.title === 'Reach UK in 14 Days' ? 'noopener noreferrer' : undefined}
+                        target={event.title === 'Reech UK in 14 Days' ? '_blank' : undefined}
+                        rel={event.title === 'Reech UK in 14 Days' ? 'noopener noreferrer' : undefined}
                       >
-                          {event.title === 'Reach UK in 14 Days' ? 'Apply Now' : 'Learn More'}
+                          {event.title === 'Reech UK in 14 Days' ? 'Apply Now' : 'Learn More'}
                       </a>
                   </div>
                 </div>
