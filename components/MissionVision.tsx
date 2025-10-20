@@ -3,16 +3,42 @@ import { TargetIcon } from './icons/TargetIcon';
 import { EyeIcon } from './icons/EyeIcon';
 import Card from './ui/Card';
 
-const missionVisionData = [
+const missionVisionData: { icon: React.ReactNode; title: string; description: React.ReactNode }[] = [
   {
     icon: <TargetIcon />,
     title: 'Our Mission',
-    description: 'To empower students and professionals to achieve their global academic and career aspirations by providing expert, personalized, and ethical guidance.',
+    description: (
+      <div className="text-left md:text-center">
+        <p className="mb-4">To guide dreamers toward their destination through:</p>
+        <ul className="space-y-3 inline-block text-left">
+          <li>
+            <strong className="text-brand-blue">Personalized pathways</strong>
+            <span className="ml-1">— helping each student find the right course, country, and university that fits their goals.</span>
+          </li>
+          <li>
+            <strong className="text-brand-blue">Trusted guidance</strong>
+            <span className="ml-1">— making the study abroad process simple, transparent, and stress-free.</span>
+          </li>
+          <li>
+            <strong className="text-brand-blue">Global connections</strong>
+            <span className="ml-1">— bridging students with world-class institutions and endless possibilities.</span>
+          </li>
+        </ul>
+        <p className="mt-6 italic">
+          Because at English Route Study Abroad, we don’t just prepare students for education abroad — we prepare them for life beyond it.
+        </p>
+      </div>
+    ),
   },
   {
     icon: <EyeIcon />,
     title: 'Our Vision',
-    description: 'To be the most trusted and respected international education and career consultancy, renowned for creating life-changing opportunities and fostering global citizenship.',
+    description: (
+      <>
+        <p className="text-xl italic text-brand-blue font-semibold mb-3">The World, Your Campus</p>
+        <p>To empower students to become confident global achievers by unlocking education opportunities across borders. We aim to redefine abroad education — not just as a journey to study overseas, but as a transformation toward knowledge, independence, and global impact.</p>
+      </>
+    ),
   },
 ];
 
@@ -28,12 +54,12 @@ const MissionVision: React.FC = () => {
         </div>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {missionVisionData.map((item, index) => (
-            <Card key={index} className="text-center p-8 border border-gray-200 shadow-xl hover:translate-y-0 hover:shadow-xl">
+            <Card key={index} className="text-center p-8 border border-gray-200 shadow-xl hover:translate-y-0 hover:shadow-xl flex flex-col">
               <div className="flex justify-center mb-4">
                 {item.icon}
               </div>
               <h3 className="text-2xl font-bold text-brand-blue mb-3">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <div className="text-gray-600 flex-grow">{item.description}</div>
             </Card>
           ))}
         </div>

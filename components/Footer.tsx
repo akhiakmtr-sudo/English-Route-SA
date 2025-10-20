@@ -3,6 +3,10 @@ import React from 'react';
 import { LocationMarkerIcon } from './icons/LocationMarkerIcon';
 import { PhoneIcon } from './icons/PhoneIcon';
 import { MailIcon } from './icons/MailIcon';
+import { FacebookIcon } from './icons/FacebookIcon';
+import { InstagramIcon } from './icons/InstagramIcon';
+import { ThreadsIcon } from './icons/ThreadsIcon';
+import { YoutubeIcon } from './icons/YoutubeIcon';
 
 const Footer: React.FC = () => {
   return (
@@ -16,46 +20,61 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-gray-300 max-w-sm mx-auto md:mx-0">
               Your trusted partner for unlocking international opportunities and building a global future.
             </p>
+            <div className="mt-6 flex justify-center md:justify-start space-x-3">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors duration-300">
+                    <FacebookIcon />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors duration-300">
+                    <InstagramIcon />
+                </a>
+                <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="text-gray-300 hover:text-white transition-colors duration-300">
+                    <ThreadsIcon />
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
+                    <YoutubeIcon />
+                </a>
+            </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-brand-gold tracking-wider">Get in Touch</h3>
-            <div className="mt-4 space-y-6 text-gray-300">
-                {/* Dubai Office */}
-                <div>
-                    <div className="flex items-start justify-center md:justify-start">
-                        <LocationMarkerIcon className="text-brand-gold mt-1" />
-                        <address className="ml-4 not-italic">
-                            <strong className="text-white">Dubai Office</strong><br/>
+            <div className="mt-4 space-y-5 text-gray-300">
+                {/* Dubai Office Block */}
+                <div className="flex items-start justify-center md:justify-start">
+                    <LocationMarkerIcon className="text-brand-gold mt-1 flex-shrink-0" />
+                    <div className="ml-2">
+                        <p className="font-bold text-white">Dubai Office</p>
+                        <address className="not-italic text-sm leading-relaxed">
                             Office - G14, Blue Titan, Art Tower<br/>
                             Bur Dubai, Dubai - UAE
                         </address>
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start mt-2">
-                        <PhoneIcon className="text-brand-gold" />
-                        <a href="tel:+971589076061" className="ml-4 hover:text-white transition">+971 589076061</a>
+                        <a href="tel:+971589076061" className="mt-1 inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors group">
+                            <PhoneIcon className="w-4 h-4 mr-2 text-brand-gold transition-colors group-hover:text-white" />
+                            <span>+971 589076061</span>
+                        </a>
                     </div>
                 </div>
 
-                {/* UK Office */}
-                <div>
-                    <div className="flex items-start justify-center md:justify-start">
-                        <LocationMarkerIcon className="text-brand-gold mt-1" />
-                        <address className="ml-4 not-italic">
-                            <strong className="text-white">UK Office</strong><br/>
+                {/* UK Office Block */}
+                <div className="flex items-start justify-center md:justify-start">
+                     <LocationMarkerIcon className="text-brand-gold mt-1 flex-shrink-0" />
+                    <div className="ml-2">
+                        <p className="font-bold text-white">UK Office</p>
+                        <address className="not-italic text-sm leading-relaxed">
                             160 London Road Jhumat house,<br/>
                             Barking IG11 8BB
                         </address>
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start mt-2">
-                        <PhoneIcon className="text-brand-gold" />
-                        <a href="tel:+447826828220" className="ml-4 hover:text-white transition">+44 7826828220</a>
+                         <a href="tel:+447826828220" className="mt-1 inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors group">
+                            <PhoneIcon className="w-4 h-4 mr-2 text-brand-gold transition-colors group-hover:text-white" />
+                            <span>+44 7826828220</span>
+                        </a>
                     </div>
                 </div>
-                 {/* Email */}
+                
+                 {/* Email Block */}
                 <div className="flex items-center justify-center md:justify-start">
-                  <MailIcon className="text-brand-gold" />
-                  <a href="mailto:info@englishroutestudyabroad.com" className="ml-4 hover:text-white transition">info@englishroutestudyabroad.com</a>
+                  <MailIcon className="text-brand-gold flex-shrink-0" />
+                  <a href="mailto:info@englishroutestudyabroad.com" className="ml-2 text-sm hover:text-white transition">info@englishroutestudyabroad.com</a>
                 </div>
             </div>
           </div>
