@@ -40,6 +40,7 @@ const OpportunityDetail: React.FC = () => {
                         </svg>
                         Back to Home
                     </a>
+                    {/* <a href=""></a> */}
                 </div>
 
                 <header>
