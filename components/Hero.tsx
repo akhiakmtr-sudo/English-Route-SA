@@ -27,8 +27,8 @@ const Hero: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="min-h-screen flex items-center justify-center">
-            <div className="text-center max-w-4xl py-24">
+          <div className="h-[500px] flex items-center justify-center">
+            <div className="text-center max-w-4xl">
                 <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
                     Your Journey to a Global Future <span className="text-brand-teal">Starts Here</span>.
                 </h1>
