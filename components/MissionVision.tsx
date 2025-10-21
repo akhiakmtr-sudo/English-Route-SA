@@ -46,12 +46,6 @@ const MissionVision: React.FC = () => {
   return (
     <section id="mission-vision" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-blue">Our Mission & Vision</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-            Our guiding principles that drive us forward.
-          </p>
-        </div>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {missionVisionData.map((item, index) => (
             <Card key={index} className="text-center p-8 border border-gray-200 shadow-xl hover:translate-y-0 hover:shadow-xl flex flex-col">
