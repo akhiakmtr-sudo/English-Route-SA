@@ -21,16 +21,16 @@ const Footer: React.FC = () => {
               Your trusted partner for unlocking international opportunities and building a global future.
             </p>
             <div className="mt-6 flex justify-center md:justify-start space-x-3">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/share/1Fc9z4RcmY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition-opacity duration-300 hover:opacity-80">
                     <FacebookIcon />
                 </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="https://www.instagram.com/englishroutestudyabroad?igsh=MWticjJub3plYmo3MA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-opacity duration-300 hover:opacity-80">
                     <InstagramIcon />
                 </a>
-                <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="transition-opacity duration-300 hover:opacity-80">
                     <ThreadsIcon />
                 </a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transition-opacity duration-300 hover:opacity-80">
                     <YoutubeIcon />
                 </a>
             </div>
