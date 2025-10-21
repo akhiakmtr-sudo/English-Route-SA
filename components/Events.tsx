@@ -11,7 +11,7 @@ const eventsData: Event[] = [
     type: 'University Admission',
     title: 'Qualifi Level 3 Diploma in Health and Social Care',
     country: 'UK',
-    lastDateToApply: 'Feb 28, 2025',
+    lastDateToApply: 'Oct - Nov 2025',
     points: [
       'Level 3 RQF Qualification',
       'Fully Accredited by Ofqual',
