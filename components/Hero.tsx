@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Benefits Section */}
-      <div className="py-24 md:py-32">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
               {benefitsData.map((benefit, index) => (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import AdBanner from './components/AdBanner';
 import About from './components/About';
 import MissionVision from './components/MissionVision';
 import Services from './components/Services';
@@ -36,6 +37,7 @@ const App: React.FC = () => {
     return (
       <>
         <Hero />
+        <AdBanner />
         <About />
         <MissionVision />
         <Services />
