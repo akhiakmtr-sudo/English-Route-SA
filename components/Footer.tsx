@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 <a href="https://www.instagram.com/englishroutestudyabroad?igsh=MWticjJub3plYmo3MA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-opacity duration-300 hover:opacity-80">
                     <InstagramIcon />
                 </a>
-                <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="transition-opacity duration-300 hover:opacity-80">
+                <a href="https://www.threads.com/@englishroutestudyabroad" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="transition-opacity duration-300 hover:opacity-80">
                     <ThreadsIcon />
                 </a>
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transition-opacity duration-300 hover:opacity-80">
