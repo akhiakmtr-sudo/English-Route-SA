@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Button from './ui/Button';
 import { TrendingUpIcon } from './icons/TrendingUpIcon';
@@ -22,7 +23,7 @@ const Hero: React.FC = () => {
       {/* Top Part with background image */}
       <div 
         className="relative bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/englishabrd.jpeg')" }}
+        style={{ backgroundImage: "url('https://i.postimg.cc/vT5ckrXn/Blue-Modern-Marketing-Ideas-and-Tips-Youtube-Thumbnail-20251021-225516-0000.png')" }}
       >
         <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,9 +32,6 @@ const Hero: React.FC = () => {
                 <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
                     Your Journey to a Global Future <span className="text-brand-teal">Starts Here</span>.
                 </h1>
-                <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                    English Route Study Abroad is your trusted partner for unlocking international opportunities. We provide expert guidance for studying abroad and securing your dream job overseas.
-                </p>
                 <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <Button href="#services" variant="primary">Explore Our Services</Button>
                 </div>
