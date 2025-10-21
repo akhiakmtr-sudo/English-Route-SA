@@ -14,6 +14,7 @@ export interface Event {
   points: string[];
   imageUrl: string;
   detailsUrl?: string;
+  pdfUrl?: string;
 }
 
 export enum MessageSender {

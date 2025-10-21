@@ -4,6 +4,7 @@ import { Event } from '../types';
 import Card from './ui/Card';
 import { CalendarIcon } from './icons/CalendarIcon';
 import { LocationMarkerIcon } from './icons/LocationMarkerIcon';
+import { DownloadIcon } from './icons/DownloadIcon';
 
 const eventsData: Event[] = [
   {
@@ -19,7 +20,8 @@ const eventsData: Event[] = [
       'Available in the UK and Internationally'
     ],
     imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/20251019_164526_0000.jpg',
-    detailsUrl: '#/opportunity/qualifi-level-3-diploma'
+    detailsUrl: '#/opportunity/qualifi-level-3-diploma',
+    pdfUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/QUALIFI-Level-3-Diploma-in-Health-and-Social-Care-SpecificationJune2025v2.p_20251019_141348_0000.pdf',
   },
   {
     type: 'Study & Work',
@@ -35,7 +37,8 @@ const eventsData: Event[] = [
       'Only £6000, no advance payment',
     ],
     imageUrl: 'https://stockwellgoldgallery.s3.us-west-2.amazonaws.com/English+Route+Study+Abroad_20251019_170226_0000.png',
-    detailsUrl: 'https://wa.me/971589076061'
+    detailsUrl: 'https://wa.me/971589076061',
+    pdfUrl: '#',
   },
 ];
 
@@ -83,6 +86,29 @@ const Events: React.FC = () => {
                   </ul>
 
                   <div className="mt-auto">
+                    {event.pdfUrl && event.pdfUrl !== '#' ? (
+                      <div className="grid grid-cols-2 gap-3">
+                        <a 
+                          href={event.detailsUrl || '#contact'} 
+                          className="text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1"
+                          target={event.title === 'Reech UK in 14 Days' ? '_blank' : undefined}
+                          rel={event.title === 'Reech UK in 14 Days' ? 'noopener noreferrer' : undefined}
+                        >
+                            {event.title === 'Reech UK in 14 Days' ? 'Apply Now' : 'Learn More'}
+                        </a>
+                        <a 
+                            href={event.pdfUrl} 
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-center block bg-white text-brand-blue font-semibold py-2.5 px-4 rounded-md hover:bg-gray-100 border border-gray-300 transition-all shadow-md transform group-hover:-translate-y-1 flex items-center justify-center"
+                            aria-label={`Download PDF for ${event.title}`}
+                        >
+                            <DownloadIcon />
+                            <span>PDF</span>
+                        </a>
+                      </div>
+                    ) : (
                       <a 
                         href={event.detailsUrl || '#contact'} 
                         className="w-full text-center block bg-brand-teal text-white font-semibold py-2.5 px-4 rounded-md hover:bg-brand-blue transition-all shadow-md transform group-hover:-translate-y-1"
@@ -91,6 +117,7 @@ const Events: React.FC = () => {
                       >
                           {event.title === 'Reech UK in 14 Days' ? 'Apply Now' : 'Learn More'}
                       </a>
+                    )}
                   </div>
                 </div>
               </Card>
