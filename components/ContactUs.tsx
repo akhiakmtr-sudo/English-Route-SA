@@ -13,6 +13,7 @@ const ContactUs: React.FC = () => {
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
@@ -39,12 +40,102 @@ const ContactUs: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      // In a real application, you would send the data to a server here.
-      console.log('Form submitted successfully:', formData);
-      setIsSubmitted(true);
+    if (validate() && !isLoading) {
+      setIsLoading(true);
+      setErrors({}); // Clear previous errors
+
+      // IMPORTANT: Replace this placeholder with your Google Apps Script Web App URL.
+      // Follow the instructions in the comments below to set up your Google Sheet and Apps Script.
+      /*
+       * HOW TO SET UP GOOGLE APPS SCRIPT:
+       * 1. Create a new Google Sheet (e.g., name it "Contact Form Leads").
+       * 2. In the sheet, go to "Extensions" > "Apps Script".
+       * 3. Erase any existing code in the script editor and paste the following code. Then, save the project.
+       *
+       *    function doPost(e) {
+       *      try {
+       *        // Attempts to find a sheet named 'Leads'. If it doesn't exist, it creates one.
+       *        var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Leads');
+       *        if (!sheet) {
+       *          sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet('Leads');
+       *          // Sets the headers for the new sheet.
+       *          sheet.appendRow(['Timestamp', 'Name', 'Email', 'Mobile Number', 'Country', 'Course Name', 'Preference Country', 'Query']);
+       *        }
+       *        
+       *        // Parses the incoming form data from the website.
+       *        var data = JSON.parse(e.postData.contents);
+       *        
+       *        // Creates a new row with the form data.
+       *        var newRow = [
+       *          new Date(),
+       *          data.name,
+       *          data.email,
+       *          data.mobileNumber,
+       *          data.country,
+       *          data.courseName,
+       *          data.preferenceCountry,
+       *          data.query
+       *        ];
+       *        
+       *        // Appends the new row to the 'Leads' sheet.
+       *        sheet.appendRow(newRow);
+       *        
+       *        // Sends a success response back to the website.
+       *        return ContentService.createTextOutput(JSON.stringify({ result: 'success' })).setMimeType(ContentService.MimeType.JSON);
+       *
+       *      } catch (error) {
+       *        // If an error occurs, it sends an error response back.
+       *        return ContentService.createTextOutput(JSON.stringify({ result: 'error', message: error.toString() })).setMimeType(ContentService.MimeType.JSON);
+       *      }
+       *    }
+       *
+       * 4. Click "Deploy" > "New deployment".
+       * 5. Click the gear icon next to "Select type" and choose "Web app".
+       * 6. In the configuration:
+       *    - Give it a description (e.g., "Contact Form Handler").
+       *    - For "Execute as", select "Me".
+       *    - For "Who has access", select "Anyone". **<-- This is very important!**
+       * 7. Click "Deploy".
+       * 8. Click "Authorize access" and follow the prompts to grant permissions to your script.
+       * 9. After authorization, copy the "Web app URL" and paste it into the SCRIPT_URL variable below.
+       */
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzfFzdl5P_slXUuzOndUM36yzE0URtfXtoUokzl374FVrpERPwcWOdPQoIPqbvUSOse/exec';
+
+      // FIX: The comparison against a placeholder URL was removed. It was causing a TypeScript
+      // error because SCRIPT_URL is a constant with a different value, making the condition unreachable.
+      if (SCRIPT_URL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')) {
+        console.error("Please replace 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' with your actual Google Apps Script URL.");
+        setErrors({ form: 'Form submission is not configured. Please contact the site administrator.' });
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          // Using text/plain is a common workaround to avoid CORS preflight issues with Google Apps Script
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        });
+
+        if (response.ok) {
+          const res = await response.json();
+          if (res.result === 'success') {
+            setIsSubmitted(true);
+          } else {
+            throw new Error(res.message || 'An unknown error occurred in the script.');
+          }
+        } else {
+            throw new Error(`Network response was not ok. Status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setErrors({ form: 'An unexpected error occurred. Please try again.' });
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -101,7 +192,10 @@ const ContactUs: React.FC = () => {
                         <textarea name="query" id="query-contact" placeholder="Your Query" rows={4} value={formData.query} onChange={handleChange} aria-invalid={!!errors.query} aria-describedby="query-error-contact" className={`w-full bg-white p-3 rounded-md border ${errors.query ? 'border-red-400' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-brand-teal transition`} required></textarea>
                         {errors.query && <p id="query-error-contact" className="text-red-400 text-sm mt-1">{errors.query}</p>}
                     </div>
-                    <button type="submit" className="w-full bg-brand-teal text-white font-bold py-3 px-6 rounded-md hover:bg-brand-blue transition-all shadow-lg transform hover:-translate-y-1">Submit Query</button>
+                    {errors.form && <p id="form-error-contact" className="text-red-500 text-sm text-center mb-2">{errors.form}</p>}
+                    <button type="submit" disabled={isLoading} className="w-full bg-brand-teal text-white font-bold py-3 px-6 rounded-md hover:bg-brand-blue transition-all shadow-lg transform hover:-translate-y-1 disabled:bg-gray-400 disabled:cursor-not-allowed">
+                      {isLoading ? 'Submitting...' : 'Submit Query'}
+                    </button>
                 </form>
             )}
             </div>
